@@ -27,3 +27,7 @@ We can confirm all this by opening the Redux DevTools Extention and looking at t
 Let's create a React component that shows the list of posts.
 
 All of the code related to our feed posts feature should go in the posts folder, so create a new file named PostsList.js in there.
+
+React components can read data from the Redux store using the `useSelector` hook from the Reac-Redux library. 
+
+Then, update the routing in`App.js` so that we show the `PostsList` component. Import the `PostsList` component and put it in the return statement. Wrap it in a React Fragment because we're going to add something else to the main page soon.

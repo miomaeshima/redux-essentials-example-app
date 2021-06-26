@@ -8,6 +8,8 @@ import {
 
 import { Navbar } from './app/Navbar';
 
+import { PostsList } from './features/posts/PostsList';
+
 function App() {
     return (
         <Router>
@@ -19,9 +21,9 @@ function App() {
                         path="/"
                         render={() => (
                             <section>
-                                <h2>
-                                    Welcome to the Redux Essentials example app!
-                                </h2>
+                               <React.Fragment>
+                                 <PostsList />
+                               </React.Fragment>
                             </section>
                         )}
                     />
@@ -31,6 +33,5 @@ function App() {
         </Router>
     );
 }
-
 
 export default App;
