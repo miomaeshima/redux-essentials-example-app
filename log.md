@@ -59,4 +59,14 @@ The `action` object will have our new post entry as the `action.payload` field, 
 When we write the `postAdded` reducer function, `createSlice` will automatically generate an `action creator` function with the same name.
 We can export that action creator and use it in our UI components to dispatch the action when the user clicks "Save Post".
 
+## Dispatching the "Post Added" Action
+Let's add a click handler to the button in the `AddPostForm` to dispatch the `postAdded` action creator and pass in a new post object containing the title and content.
+
+The post objects also need an `id` field. We can generate a random unique ID using `nanoid` function of Redux Toolkit. 
+
+To dispatch actions from a component, we need access to the store's `dispatch` function. We get this bay calling the `useDispatch` hook from React-Redux. We also need to import the `postAdded` action creator into this file. 
+
+Once we have the `dispatch` function in our component, we can call `dispatch(postAdded())` in a click handler. We can take the title and content values from React component `useState` hooks, generate a new ID, and put them together into a new post object and pass that object to `postAdded()`.
+
+
 
