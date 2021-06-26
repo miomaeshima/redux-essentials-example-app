@@ -9,6 +9,7 @@ import {
 import { Navbar } from './app/Navbar';
 
 import { PostsList } from './features/posts/PostsList';
+import { AddPostsForm } from './features/posts/AddPostsForm';
 
 function App() {
     return (
@@ -21,9 +22,10 @@ function App() {
                         path="/"
                         render={() => (
                             <section>
-                               <React.Fragment>
-                                 <PostsList />
-                               </React.Fragment>
+                                <React.Fragment>
+                                    <AddPostsForm />
+                                    <PostsList />
+                                </React.Fragment>
                             </section>
                         )}
                     />

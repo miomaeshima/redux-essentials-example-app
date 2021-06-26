@@ -31,3 +31,16 @@ All of the code related to our feed posts feature should go in the posts folder,
 React components can read data from the Redux store using the `useSelector` hook from the Reac-Redux library. 
 
 Then, update the routing in`App.js` so that we show the `PostsList` component. Import the `PostsList` component and put it in the return statement. Wrap it in a React Fragment because we're going to add something else to the main page soon.
+
+## Adding New Posts
+
+Let's create an "Add New Post" form to let us write posts and save them.
+
+### Adding the New Post Form
+Create `AddPostForm.js` in our `posts` folder. Add a text input for the post title, and a text area for the body of the post.
+
+### Importing the component into App.js
+Import the component into App.js and add it right above the <PostsList /> component.
+
+### Saving Posts Entries
+Let's update the posts slice to add new post entries to the Redux store
